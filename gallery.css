@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(44, 44, 44);
+}
+.bar{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(87, 85, 85);
+    box-shadow: 100px black;
+    padding-top: 30px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
+.grided {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.imgs{
+    align-items: stretch;
+    border: 10px white;
+    
+}
+img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px rgb(255, 49, 49); 
+}
+

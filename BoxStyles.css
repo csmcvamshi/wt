@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(65, 62, 62);
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(43, 42, 42);
+    color: aliceblue;
+}
+.d1{
+    background-color: rgb(134, 130, 130);
+    margin: 20px;
+    padding: 20px;
+    padding-top:  30px;
+    border: 10px solid black;
+}
+.d2{
+    background-color: rgb(148, 75, 75);
+    margin:90px;
+    padding: 100px;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+.d3{
+    background-color: rgb(255, 249, 249);
+    margin: 100px;
+    padding: 75px;
+    color: black;
+    padding-top:  45px;
+    border: 10px solid black;
+}
