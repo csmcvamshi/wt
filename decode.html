@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function encode(){
+        let code = document.getElementById('input').value;
+        let encoded = '';
+        for(let i = 0; i < code.length; i++){
+            encoded += String.fromCharCode(code.charCodeAt(i) + 1);
+        }
+        document.getElementById('output').value = encoded;
+    }
+
+    function decode(){
+        let code = document.getElementById('input').value;
+        let decoded = '';
+        for(let i = 0; i < code.length; i++){
+            decoded += String.fromCharCode(code.charCodeAt(i) - 1);
+        }
+        document.getElementById('output').value = decoded;
+    }
+</script>
+</head>
+<body>
+    INPUT:<input type="text" id = "input" required><br><br>
+    OUTPUT: <input type="text" id="output" readonly><br><br>
+    <button onclick="encode()">Encode</button>
+    <button onclick="decode()">Decode</button>
+</body>
+</html>

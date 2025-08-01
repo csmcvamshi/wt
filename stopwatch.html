@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var seconds = 0;
+        var interval;
+
+        function updateTime() {
+            var hrs = Math.floor(seconds / 3600);
+            var mins = Math.floor((seconds % 3600) / 60);
+            var secs = seconds % 60;
+            document.getElementById('time').textContent =
+                (hrs < 10 ? '0' + hrs : hrs) + ':' +
+                (mins < 10 ? '0' + mins : mins) + ':' +
+                (secs < 10 ? '0' + secs : secs);
+        }
+
+        function start() {
+            if (!interval) {
+                interval = setInterval(function () {
+                    seconds++;
+                    updateTime();
+                }, 1000);
+            }
+        }
+
+        function stop() {
+            clearInterval(interval);
+            interval = null;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="timer"></h1>
+    <p id="time">00:00:00</p>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+</body>
+</html>
